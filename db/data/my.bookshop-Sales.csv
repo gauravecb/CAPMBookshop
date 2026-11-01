@@ -1,0 +1,6 @@
+ID,book_ID,quantity,unitPrice_amount,unitPrice_currency_code,saleDate
+aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa,11111111-1111-1111-1111-111111111111,3,550,INR,2026-10-30T10:00:00Z
+bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb,22222222-2222-2222-2222-222222222222,2,650,INR,2026-10-30T11:30:00Z
+cccccccc-cccc-cccc-cccc-cccccccccccc,33333333-3333-3333-3333-333333333333,1,750,INR,2026-10-31T09:15:00Z
+dddddddd-dddd-dddd-dddd-dddddddddddd,44444444-4444-4444-4444-444444444444,4,950,INR,2026-10-31T12:00:00Z
+eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee,55555555-5555-5555-5555-555555555555,2,850,INR,2026-10-31T15:30:00Z

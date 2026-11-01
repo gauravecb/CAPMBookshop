@@ -1,102 +1,48 @@
+
 using CatalogService as service from '../../srv/cat-service';
 
 annotate service.Books with @(
     UI.FieldGroup #GeneratedGroup: {
         $Type: 'UI.FieldGroupType',
-        Data : [
-            {
-                $Type: 'UI.DataField',
-                Label: 'ID',
-                Value: ID,
-            },
-            {
-                $Type: 'UI.DataField',
-                Label: 'Title',
-                Value: title,
-            },
-            {
-                $Type: 'UI.DataField',
-                Label: 'Stock',
-                Value: stock,
-            },
-            {
-                $Type: 'UI.DataField',
-                Label: 'Author',
-                Value: author,
-            },
-            {
-                $Type: 'UI.DataField',
-                Label: 'Genre',
-                Value: genre,
-            },
-            {
-                $Type: 'UI.DataField',
-                Label: 'Price Amount',
-                Value: price_amount,
-            },
-            {
-                $Type: 'UI.DataField',
-                Label: 'Currency',
-                Value: price_currency_code,
-            },
-            {
-                $Type: 'UI.DataField',
-                Label: 'Publication Country',
-                Value: publCountry_code,
-            },
-        ],
+        Data: [
+            { $Type: 'UI.DataField', Label: 'ID', Value: ID },
+            { $Type: 'UI.DataField', Label: 'Title', Value: title },
+            { $Type: 'UI.DataField', Label: 'Stock', Value: stock },
+            { $Type: 'UI.DataField', Label: 'Author', Value: author },
+            { $Type: 'UI.DataField', Label: 'Genre', Value: genre },
+            { $Type: 'UI.DataField', Label: 'Price Amount', Value: price_amount },
+            { $Type: 'UI.DataField', Label: 'Currency', Value: price_currency_code },
+            { $Type: 'UI.DataField', Label: 'Publication Country', Value: publCountry_code }
+        ]
     },
 
-    UI.Facets                    : [{
-        $Type : 'UI.ReferenceFacet',
-        ID    : 'GeneratedFacet1',
-        Label : 'General Information',
-        Target: '@UI.FieldGroup#GeneratedGroup',
-    }, ],
-
-    UI.LineItem                  : [
+    UI.Facets: [
         {
-            $Type: 'UI.DataField',
-            Label: 'ID',
-            Value: ID,
+            $Type: 'UI.ReferenceFacet',
+            ID: 'GeneratedFacet1',
+            Label: 'General Information',
+            Target: '@UI.FieldGroup#GeneratedGroup'
         },
         {
-            $Type: 'UI.DataField',
-            Label: 'Title',
-            Value: title,
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: 'Stock',
-            Value: stock,
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: 'Author',
-            Value: author,
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: 'Genre',
-            Value: genre,
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: 'Price Amount',
-            Value: price_amount,
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: 'Currency',
-            Value: price_currency_code,
-        },
-        {
-            $Type: 'UI.DataField',
-            Label: 'Publication Country',
-            Value: publCountry_code,
-        },
+            $Type: 'UI.ReferenceFacet',
+            ID: 'SalesFacet',
+            Label: 'Sales',
+            Target: 'sales/@UI.LineItem'
+        }
     ],
+
+    UI.LineItem: [
+        { $Type: 'UI.DataField', Label: 'ID', Value: ID },
+        { $Type: 'UI.DataField', Label: 'Title', Value: title },
+        { $Type: 'UI.DataField', Label: 'Stock', Value: stock },
+        { $Type: 'UI.DataField', Label: 'Author', Value: author },
+        { $Type: 'UI.DataField', Label: 'Genre', Value: genre },
+        { $Type: 'UI.DataField', Label: 'Price Amount', Value: price_amount },
+        { $Type: 'UI.DataField', Label: 'Currency', Value: price_currency_code },
+        { $Type: 'UI.DataField', Label: 'Publication Country', Value: publCountry_code }
+    ]
 );
+
 annotate service.Books with {
     genre @(Common: {
         ValueListWithFixedValues: true,
@@ -117,3 +63,21 @@ annotate service.Books with {
         }
     });
 };
+
+annotate service.Sales with @UI.LineItem: [
+    {
+        $Type: 'UI.DataField',
+        Value: quantity,
+        Label: 'Quantity Sold'
+    },
+    {
+        $Type: 'UI.DataField',
+        Value: paymentMode,
+        Label: 'Payment Mode'
+    },
+    {
+        $Type: 'UI.DataField',
+        Value: saleDate,
+        Label: 'Sale Date'
+    }
+];

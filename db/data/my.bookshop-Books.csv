@@ -1,1 +1,6 @@
 ID,title,stock,author,genre,price_amount,price_currency_code,publCountry_code
+11111111-1111-1111-1111-111111111111,The Pragmatic Programmer,42,Andrew Hunt,1,550,INR,IN
+22222222-2222-2222-2222-222222222222,Clean Code,37,Robert C Martin,1,650,INR,IN
+33333333-3333-3333-3333-333333333333,Domain Driven Design,15,Eric Evans,1,750,INR,IN
+44444444-4444-4444-4444-444444444444,Introduction to Algorithms,21,Thomas Cormen,2,950,INR,IN
+55555555-5555-5555-5555-555555555555,Design Patterns,18,Erich Gamma,1,850,INR,IN
