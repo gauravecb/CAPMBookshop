@@ -28,7 +28,13 @@ annotate service.Books with @(
             ID: 'SalesFacet',
             Label: 'Sales',
             Target: 'sales/@UI.LineItem'
-        }
+        },
+          {
+        $Type: 'UI.ReferenceFacet',
+        ID: 'AttachmentsFacet',
+        Label: 'Attachments',
+        Target: 'attachments/@UI.LineItem'
+    }
     ],
 
     UI.LineItem: [
@@ -81,3 +87,25 @@ annotate service.Sales with @UI.LineItem: [
         Label: 'Sale Date'
     }
 ];
+annotate service.Attachments with @UI.LineItem: [
+    {
+        $Type: 'UI.DataField',
+        Value: content,
+        Label: 'Attachment'
+    },
+    {
+        $Type: 'UI.DataField',
+        Value: fileName,
+        Label: 'File Name'
+    },
+    {
+        $Type: 'UI.DataField',
+        Value: uploadedAt,
+        Label: 'Uploaded At'
+    }
+];
+annotate service.Attachments with @(
+    UI.MediaResource: {
+        Stream: content
+    }
+);
