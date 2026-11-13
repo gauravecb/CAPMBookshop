@@ -8,6 +8,7 @@ using {
 } from '@sap/cds/common';
 
 entity Books : cuid {
+    isbn        : String(13);  // NEW
     title       : String  ;
     stock       : Integer @assert.range: [
         0,

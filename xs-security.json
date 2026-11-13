@@ -1,14 +1,28 @@
+
 {
- "xsappname": "bookshop",
- "tenant-mode": "dedicated",
- "scopes": [],
- "attributes": [],
- "role-templates": [],
- "oauth2-configuration": {
-  "redirect-uris": [
-   "http://localhost:4004/**",
-   "https://.*trial.applicationstudio.cloud.sap/**",
-   "https://.*cfapps.us10-001.hana.ondemand.com/**"
-  ]
- }
+  "xsappname": "bookshop-ab0b80e7trial-dev",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Administrator access to manage books"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Admin",
+      "description": "Administrator role for the Bookshop application",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "http://localhost:4004/**",
+      "https://.*trial.applicationstudio.cloud.sap/**",
+      "https://.*cfapps.us10-001.hana.ondemand.com/**"
+    ]
+  }
 }

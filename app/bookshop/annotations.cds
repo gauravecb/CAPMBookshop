@@ -6,6 +6,7 @@ annotate service.Books with @(
         $Type: 'UI.FieldGroupType',
         Data: [
             { $Type: 'UI.DataField', Label: 'ID', Value: ID },
+            {$Type: 'UI.DataField',Label: 'ISBN',Value: isbn},
             { $Type: 'UI.DataField', Label: 'Title', Value: title },
             { $Type: 'UI.DataField', Label: 'Stock', Value: stock },
             { $Type: 'UI.DataField', Label: 'Author', Value: author },
