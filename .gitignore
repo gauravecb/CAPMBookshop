@@ -2,6 +2,7 @@
 .env
 *.mtaext
 
+node_modules/
 target/
 _out/
 gen/
