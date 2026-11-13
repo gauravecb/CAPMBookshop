@@ -131,6 +131,13 @@ modules:
               ServiceInstanceName: bookshop-auth
               ServiceKeyName: bookshop-auth-key
               sap.cloud.service: bookshop.service
+            - Name: API_BUSINESS_PARTNER
+              URL: https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER
+              Type: HTTP
+              ProxyType: Internet
+              Authentication: NoAuthentication
+              HTML5.DynamicDestination: true
+              URL.headers.APIKey: <YOUR_API_KEY>
 
 resources:
   - name: bookshop-auth

@@ -74,6 +74,11 @@ annotate service.Books with {
 annotate service.Sales with @UI.LineItem: [
     {
         $Type: 'UI.DataField',
+        Value: customer_ID,
+        Label: 'Customer'
+    },
+    {
+        $Type: 'UI.DataField',
         Value: quantity,
         Label: 'Quantity Sold'
     },
@@ -110,3 +115,24 @@ annotate service.Attachments with @(
         Stream: content
     }
 );
+
+annotate service.Sales with {
+    customer_ID @(
+        title: 'Customer',
+        Common.ValueList: {
+            $Type          : 'Common.ValueListType',
+            CollectionPath : 'BusinessPartners',
+            Parameters     : [
+                {
+                    $Type             : 'Common.ValueListParameterOut',
+                    LocalDataProperty : customer_ID,
+                    ValueListProperty : 'ID'
+                },
+                {
+                    $Type             : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty : 'fullName'
+                }
+            ]
+        }
+    )
+};

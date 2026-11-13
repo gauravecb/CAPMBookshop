@@ -1,10 +1,15 @@
 
+
 import cds from '@sap/cds';
 
 const { SELECT } = cds.ql;
 
 export default class CatalogService extends cds.ApplicationService {
     async init() {
+
+         const bp = await cds.connect.to('API_BUSINESS_PARTNER')
+
+        this.on('READ', 'BusinessPartners', req => bp.run(req.query))
 
         this.on('findBookByISBN', async (req) => {
             const { isbn } = req.data;
@@ -27,5 +32,7 @@ export default class CatalogService extends cds.ApplicationService {
         });
 
         return super.init();
+
+
     }
 }
