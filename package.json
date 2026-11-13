@@ -40,13 +40,13 @@
           "credentials": {
             "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER",
             "headers": {
-              "APIKey": "SVcIA1zEzS4z7NAYJ2wQAvfTvtfutnDa"
+              "APIKey": "key"
             }
           }
         },
         "[production]": {
           "credentials": {
-            "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+            "destination": "API_BUSINESS_PARTNER"
           }
         }
       }

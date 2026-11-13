@@ -20,7 +20,7 @@ modules:
       buildpack: nodejs_buildpack
     properties:
       CDS_REQUIRES_API_BUSINESS_PARTNER_CREDENTIALS_URL: https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER
-      CDS_REQUIRES_API_BUSINESS_PARTNER_CREDENTIALS_HEADERS_APIKEY: <YOUR_API_KEY>
+      CDS_REQUIRES_API_BUSINESS_PARTNER_CREDENTIALS_HEADERS_APIKEY: key
     build-parameters:
       builder: npm-ci
     provides:

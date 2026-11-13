@@ -10,6 +10,12 @@
       "csrfProtection": true
     },
     {
+      "source": "^/business-partner/(.*)$",
+      "target": "/$1",
+      "destination": "API_BUSINESS_PARTNER",
+      "authenticationType": "none"
+    },
+    {
       "source": "^(.*)$",
       "service": "html5-apps-repo-rt",
       "authenticationType": "xsuaa",
