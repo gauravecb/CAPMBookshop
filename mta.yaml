@@ -137,7 +137,7 @@ modules:
               ProxyType: Internet
               Authentication: NoAuthentication
               HTML5.DynamicDestination: true
-              URL.headers.APIKey: <YOUR_API_KEY>
+              URL.headers.APIKey: SVcIA1zEzS4z7NAYJ2wQAvfTvtfutnDa
 
 resources:
   - name: bookshop-auth
