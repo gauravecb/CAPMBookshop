@@ -1,0 +1,6 @@
+BusinessPartner;BusinessPartnerFullName;BusinessPartnerName;FirstName;LastName;BusinessPartnerType;IsNaturalPerson
+1000000001;John Smith;Smith;John;Smith;1;X
+1000000002;Jane Doe;Doe;Jane;Doe;1;X
+1000000003;Acme Corporation;Acme Corporation;;;2;
+1000000004;Bob Johnson;Johnson;Bob;Johnson;1;X
+1000000005;Global Tech Ltd;Global Tech Ltd;;;2;

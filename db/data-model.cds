@@ -40,6 +40,7 @@ type Price {
 
 entity Sales : cuid {
     book        : Association to Books;
+    customer_ID : String(10);
     quantity    : Integer   @assert.range : [
         1,
         2147483647
